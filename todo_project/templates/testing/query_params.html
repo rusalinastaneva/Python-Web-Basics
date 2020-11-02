@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>
+    {{ q }}
+    <div>
+        <a href="{% url 'query_params' %}?q={{ q }}">Go to query params with url func</a>
+    </div>
+    <div>
+        <a href="/profiles/query_params?q={{ q }}">Go to query params with whole url</a>
+    </div>
+</h1>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block page_styles %}
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+{% endblock %}
+
+{% block site_title %}
+    GAMES PAGE
+{% endblock %}
+
+
+{% block site_content %}
+    <h1>GAMES PAGE WITH CLASS VIEW WORKS FINE!</h1>
+    <ul>
+        {% for game in object_list %}
+            <li>
+                {{ game.name }}
+                {{ game.level_of_difficulty }}
+                {{ game.get_level_of_difficulty_display }}
+                {{ game.players_count }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
